@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Consumption</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #444;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 5px rgba(79,172,254,0.5);
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button[type="submit"] {
+            background-color: #4facfe;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #007bff;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            float: right;
+        }
+
+        button[type="reset"]:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+
+<form method="post">
+    <h2>Energy Consumption Form</h2>
+
+    <label>Enter Temperature</label>
+    <input type="number" step="any" name="temperature" required>
+
+    <label>Enter Humidity</label>
+    <input type="number" name="humidity" required>
+
+    <label>Enter Square Footage</label>
+    <input type="number" name="squarefootage" required>
+
+    <label>Enter Occupancy</label>
+    <input type="number" name="occupancy" required>
+
+    <label>HVAC Usage:</label>
+    <select name="hvacusage">
+        <option value="1">ON</option>
+        <option value="0">OFF</option>
+    </select>
+
+    <label>Lighting Usage</label>
+    <select name="lightingusage">
+        <option value="1">ON</option>
+        <option value="0">OFF</option>
+    </select>
+
+    <label>Renewable Energy</label>
+    <input type="number" name="renewableenergy" required>
+
+    <label>Day Of Week</label>
+    <select name="dayofweek">
+        <option value="3">Sunday</option>
+        <option value="1">Monday</option>
+        <option value="5">Tuesday</option>
+        <option value="6">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="0">Friday</option>
+        <option value="2">Saturday</option>
+    </select>
+
+    <label>Holiday</label>
+    <select name="holiday">
+        <option value="0">NO</option>
+        <option value="1">YES</option>
+    </select>
+
+    <div style="display:flex; justify-content: space-between;">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+</form>
+
+</body>
+</html>
